@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DSconexion.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DSconexion.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DsCrud.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DsCrud.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DSconexion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSconexion.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DsCrud.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsCrud.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
